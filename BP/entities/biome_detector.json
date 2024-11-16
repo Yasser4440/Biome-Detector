@@ -1121,6 +1121,11 @@
                     "queue_command": {
                         "command": "tag @s add void"
                     }
+                },
+                {
+                    "queue_command": {
+                        "command": "tp ~ ~-100 ~"
+                    }
                 }
             ]}
         }

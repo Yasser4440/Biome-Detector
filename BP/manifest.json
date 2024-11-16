@@ -1,0 +1,29 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "This addon sends the name of the biome you are to the action bar.  \nYou can also use a feather on a block or an entity to get its biome in chat.   \nFeel free to use the getBiome feature in own addons but credit me §s@Yasser444§r.  \n\nType this command to disable the biome detector:\n   §b/scriptevent biome:read false§r   \nType this command to activate it again:\n   §b/scriptevent biome:read true§r",
+        "name": "Biome Detector",
+        "uuid": "cb667304-6b9d-40ac-b7ea-69df9971cc5c",
+        "version": [ 1, 0, 0],
+        "min_engine_version": [ 1, 21, 0]
+    },
+    "modules": [
+        {
+            "type": "data",
+            "uuid": "6f051e30-4593-4d33-bb76-43392c814de9",
+            "version": [1, 0, 0]
+        },
+        {
+            "type": "script",
+            "uuid": "a2d4a092-528d-4a25-9e5c-faea5dda513f",
+            "version": [1, 0, 0],
+            "entry": "scripts/main.js"
+        }
+    ],
+    "dependencies": [
+		{
+			"module_name":"@minecraft/server",
+			"version":"1.15.0"
+		}
+    ]
+}

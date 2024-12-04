@@ -9,8 +9,8 @@ If you use a feather on a block or an entity, you will get the biome id of that 
 
 ## Commands
 (The detector can be toggled on or off per player, and it's active by default)
-To disable: `/scriptevent biome:read false`
-To enable: `/scriptevent biome:read true`
+- To disable: `/scriptevent biome:read false`
+- To enable: `/scriptevent biome:read true`
 
 To uninstall this addon from your world without a trace, make sure to activate it before leaving.
 

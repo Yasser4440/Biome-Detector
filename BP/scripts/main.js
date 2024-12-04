@@ -81,6 +81,7 @@ export const biome_names = {
 	lush_caves: "§dLush Caves",
 	dripstone_caves: "§nDripstone Caves",
 	deep_dark: "§0Deep Dark",
+	pale_garden: "§vPale Garden",
 	nether_wastes: "§cNether Wastes",
 	crimson_forest: "§mCrimson Forest",
 	warped_forest: "§3Warped Forest",

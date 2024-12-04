@@ -34,10 +34,12 @@ world.beforeEvents.playerInteractWithEntity.subscribe(async ({itemStack:item, pl
 
 system.afterEvents.scriptEventReceive.subscribe(({id, message, sourceEntity:player}) => {
 	if (id != "biome:read") return
-	if (player.typeId != "minecraft:player") return
-	const state = player.getDynamicProperty('yasser444:disable_biome_detector') == 1 ? 'in' : ''
-	if (["true", "false"].includes(message)) {
-		player.setDynamicProperty('yasser444:disable_biome_detector', message == "false" ? 1 : undefined)
-		if (!state) system.runTimeout(() => {player.onScreenDisplay.setActionBar('§.')}, 2)
-	} else player.sendMessage(`The biome detector is currently ${state}active`)
+	try {
+		if (player.typeId != "minecraft:player") return
+		const state = player.getDynamicProperty('yasser444:disable_biome_detector') == 1 ? 'in' : ''
+		if (["true", "false"].includes(message)) {
+			player.setDynamicProperty('yasser444:disable_biome_detector', message == "false" ? 1 : undefined)
+			if (!state) system.runTimeout(() => {player.onScreenDisplay.setActionBar('§.')}, 2)
+		} else player.sendMessage(`The biome detector is currently ${state}active`)
+	} catch(_) {null}
 })

@@ -1057,6 +1057,15 @@
                 {
                     "filters": {
                         "test": "has_biome_tag",
+                        "value": "pale_garden"
+                    },
+                    "queue_command": {
+                        "command": "tag @s add pale_garden"
+                    }
+                },
+                {
+                    "filters": {
+                        "test": "has_biome_tag",
                         "value": "nether_wastes"
                     },
                     "queue_command": {

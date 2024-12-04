@@ -1,5 +1,14 @@
 import { system, world} from "@minecraft/server"
 
+
+world.afterEvents.worldInitialize.subscribe(() => {
+	['overworld', 'nether', 'the_end'].forEach(dimension => 
+		world.getDimension(dimension)
+		.getEntities({type: "yasser444:biome_detector"})
+		.forEach(entity => entity.remove())
+	)
+})
+
 system.runInterval(() => {
 	world.getAllPlayers().forEach(async player => {
 		if (player.getDynamicProperty('yasser444:disable_biome_detector')) return
